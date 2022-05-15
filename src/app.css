@@ -1,0 +1,11 @@
+html {
+	--scrollbar-width: 0;
+}
+
+body {
+	margin: 0;
+}
+
+body > div {
+	width: max-content;
+}
