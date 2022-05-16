@@ -32,5 +32,7 @@ export const canvas = {
 				}
 			]
 		}
-	]
+	],
+
+	__experimental_actions: ['update', 'publish']
 };
