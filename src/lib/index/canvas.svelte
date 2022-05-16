@@ -26,7 +26,7 @@
 			alt: element.description,
 			top: element.y + 'px',
 			left: element.x + 'px',
-			// transform: transform === '' ? undefined : transform.trim()
+			transform: transform === '' ? undefined : transform.trim()
 		};
 	});
 </script>
