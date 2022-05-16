@@ -4,10 +4,15 @@ export const canvas = {
 	type: 'document',
 
 	fields: [
-		{ title: 'Title', name: 'title', type: 'string' },
-		{ title: 'Logo', name: 'logo', type: 'image' },
-		{ title: 'Width', name: 'width', type: 'number' },
-		{ title: 'Height', name: 'height', type: 'number' },
+		{ title: 'Title', name: 'title', type: 'string', validation: (Rule) => Rule.required() },
+		{ title: 'Logo', name: 'logo', type: 'image', validation: (Rule) => Rule.required() },
+		{ title: 'Width', name: 'width', type: 'number', validation: (Rule) => Rule.required().min(0) },
+		{
+			title: 'Height',
+			name: 'height',
+			type: 'number',
+			validation: (Rule) => Rule.required().min(0)
+		},
 		{
 			title: 'Elements',
 			name: 'elements',
