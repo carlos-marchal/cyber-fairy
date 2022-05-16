@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+
 	export /** @type number */ let width;
 	export /** @type number */ let height;
 
@@ -28,6 +30,14 @@
 			left: element.x + 'px',
 			transform: transform === '' ? undefined : transform.trim()
 		};
+	});
+
+	onMount(() => {
+		const viewport = window.document.body.clientWidth;
+		const canvasTotal = window.document.body.scrollWidth;
+		const middle = canvasTotal / 2 - viewport / 2;
+		console.log(middle);
+		window.document.documentElement.scrollLeft = middle;
 	});
 </script>
 
