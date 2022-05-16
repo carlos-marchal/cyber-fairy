@@ -8,7 +8,15 @@
 			imageURL: element.image === undefined ? '' : sanityImageURL(element.image)
 		}));
 
-		return { props: { height: result.height, width: result.width, elements } };
+		return {
+			props: {
+				height: result.height,
+				width: result.width,
+				title: result.title,
+				logoURL: sanityImageURL(result.logo),
+				elements
+			}
+		};
 	}
 </script>
 
@@ -16,9 +24,15 @@
 	export /** @type {number} */ let height;
 	export /** @type {number} */ let width;
 	export /** @type {import('$lib/index/canvas').Element[]} */ let elements;
+	export /** @type {string} */ let title;
+	export /** @type {string} */ let logoURL;
 	import Title from '$lib/index/title.svelte';
 	import Canvas from '$lib/index/canvas.svelte';
+	import { element } from 'svelte/internal';
 </script>
 
-<Title />
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
+<Title {title} {logoURL} />
 <Canvas {height} {width} {elements} />

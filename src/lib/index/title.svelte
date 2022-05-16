@@ -1,10 +1,11 @@
 <script>
-	import src from './title.webp';
+	export /** @type {string} */ let title;
+	export /** @type {string} */ let logoURL;
 </script>
 
 <header>
 	<div>
-		<img {src} alt="Cyber Fairy, a non event" />
+		<img src={logoURL} alt={title} />
 	</div>
 </header>
 
