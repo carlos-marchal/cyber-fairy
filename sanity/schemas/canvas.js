@@ -27,7 +27,8 @@ export const canvas = {
 						{ title: 'X', name: 'x', type: 'number', validation: (Rule) => Rule.required() },
 						{ title: 'Y', name: 'y', type: 'number', validation: (Rule) => Rule.required() },
 						{ title: 'Scale', name: 'scale', type: 'number' },
-						{ title: 'Rotation', name: 'rotation', type: 'number' }
+						{ title: 'Rotation', name: 'rotation', type: 'number' },
+						{ title: 'Video', name: 'video', type: 'file', options: { accept: 'video/mp4' } }
 					]
 				}
 			]
